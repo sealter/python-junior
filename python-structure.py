@@ -71,3 +71,57 @@ cap(["title", "python", "AI"], lambda word : print(word.capitalize()) )
 
 print("******** namespace and scope ***********")
 
+fruit = "banana"
+def change_fruit() :
+    fruit = "apple"
+    print("fruit in change_fruit function is ", fruit)
+
+
+print("fruit is ", fruit)
+change_fruit()
+
+def change_global_fruit():
+    global fruit
+    fruit = "avocado"
+    print("fruit in change_global_fruit function is ", fruit)
+    print("----- local vars : ", locals())
+
+change_global_fruit()
+print("fruit after change global ", fruit)
+
+print("----- global vars: ", globals())
+
+
+
+print("************  exception *******************")
+
+l = [1, 3, 4]
+
+try :
+    print(l[5])
+except:
+    print("index out of exception")
+
+
+
+short_list = [2, 4, 8]
+while True:
+    value = input("input your number [q to quit]")
+    if value == 'q' :
+        break
+    try :
+        print(short_list[int(value)])
+    except IndexError as idxErr :
+        print("Index Error ", idxErr)
+    except Exception as other :
+        print("other Exception ", other)
+
+
+
+class MyException(Exception) :
+    print("MyException")
+
+try :
+    raise MyException("HaHA")
+except:
+    print("Exception Testing...")
