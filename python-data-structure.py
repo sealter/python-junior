@@ -471,3 +471,11 @@ print("**** set difference")
 
 
 print("**** set exclusive")
+
+
+class Test():
+    def __str__(self) :
+        return "Test"
+
+a = Test();
+print(a.__str__());
