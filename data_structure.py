@@ -30,6 +30,8 @@ print(3.0 + 2)
 
 print(0x10)
 
+print("********binary************", str(0x10))
+
 print(0o10)
 print(0b10)
 
@@ -479,3 +481,14 @@ class Test():
 
 a = Test();
 print(a.__str__());
+
+
+
+ll = [["1", "str"], ["2", "tty"]]
+print(dict(ll))
+
+dic1 = {"1": "haha"}
+dic2 = {"2": "lala"}
+z = dic1.copy()
+z.update(dic2)
+print(z)
